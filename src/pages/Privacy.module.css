@@ -1,0 +1,17 @@
+.prose h2 {
+  margin-top: 1.8em;
+  font-size: 1.35rem;
+}
+
+.prose p {
+  color: var(--fg-muted);
+}
+
+.callout {
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid #f0d9a0;
+  border-radius: var(--radius-sm);
+  background: #fff8e6;
+  color: #7a5200;
+  font-size: 0.93rem;
+}

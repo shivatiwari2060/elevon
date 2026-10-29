@@ -1,0 +1,18 @@
+import type { NavItem } from '@/types';
+
+export const SITE = {
+  name: 'Elevon Private Limited',
+  tagline: 'Elevate. Evolve. Excel.',
+  email: 'elevonnp@gmail.com',
+  location: 'Lalitpur, Nepal',
+  description:
+    'Elevon helps businesses in Nepal and around the world strengthen their digital presence through website development, SEO, and digital marketing.',
+} as const;
+
+export const NAV: NavItem[] = [
+  { to: '/', label: 'Home' },
+  { to: '/about', label: 'About' },
+  { to: '/services', label: 'Services' },
+  { to: '/work', label: 'Our Work' },
+  { to: '/contact', label: 'Contact' },
+];

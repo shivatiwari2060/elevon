@@ -1,0 +1,19 @@
+.notice {
+  padding: var(--space-7);
+  border: 1px solid var(--border-strong);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+
+.notice:focus {
+  outline: none;
+}
+
+.notice h2 {
+  font-size: 1.6rem;
+}
+
+.notice p {
+  color: var(--fg-muted);
+}

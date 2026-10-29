@@ -1,0 +1,19 @@
+.grid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.three {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.two {
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+
+@media (max-width: 420px) {
+  .three,
+  .two {
+    grid-template-columns: 1fr;
+  }
+}

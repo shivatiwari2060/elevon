@@ -1,0 +1,37 @@
+.hero {
+  padding: calc(var(--header-height) + var(--space-9)) 0 var(--space-9);
+  border-bottom: 1px solid var(--border);
+  background-image: repeating-linear-gradient(
+    -27.3deg,
+    transparent 0 46px,
+    rgb(148 184 224 / 5%) 46px 47px
+  );
+  background-color: var(--bg);
+}
+
+.hero h1 {
+  max-width: 820px;
+  font-size: clamp(2.2rem, 4.6vw, 3.4rem);
+}
+
+.crumbs {
+  margin-bottom: var(--space-5);
+  color: var(--fg-muted);
+  font-size: 0.85rem;
+}
+
+.crumbs a {
+  color: var(--fg-muted);
+  text-decoration: none;
+}
+
+.crumbs a:hover {
+  color: var(--fg);
+}
+
+.text {
+  max-width: 640px;
+  margin: 0;
+  color: var(--fg-muted);
+  font-size: 1.15rem;
+}

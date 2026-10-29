@@ -1,0 +1,33 @@
+.split {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.slogan {
+  margin: 0;
+}
+
+.prose p {
+  color: var(--fg-muted);
+  font-size: 1.0625rem;
+}
+
+.approach {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.stepNumber {
+  display: block;
+  margin-bottom: var(--space-4);
+  color: var(--accent);
+  font: 600 0.8rem/1 var(--font-display);
+}
+
+@media (max-width: 960px) {
+  .split {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+}

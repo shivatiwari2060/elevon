@@ -1,0 +1,18 @@
+.section {
+  position: relative;
+  padding: var(--space-10) 0;
+}
+
+.flushTop {
+  padding-top: var(--space-7);
+}
+
+@media (max-width: 860px) {
+  .section {
+    padding: var(--space-9) 0;
+  }
+
+  .flushTop {
+    padding-top: var(--space-6);
+  }
+}

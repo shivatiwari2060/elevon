@@ -1,0 +1,24 @@
+.field {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.required {
+  color: #c0362c;
+}
+
+.optional {
+  color: var(--fg-muted);
+  font-weight: 400;
+}
+
+.error {
+  margin: 0;
+  color: #c0362c;
+  font-size: 0.86rem;
+}

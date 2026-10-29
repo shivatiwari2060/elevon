@@ -1,0 +1,9 @@
+.note {
+  margin: var(--space-7) 0 0;
+  padding: var(--space-4) var(--space-5);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--slate-50);
+  color: var(--fg-muted);
+  font-size: 0.95rem;
+}

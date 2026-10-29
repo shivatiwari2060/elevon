@@ -1,0 +1,10 @@
+.header {
+  max-width: 680px;
+  margin-bottom: var(--space-8);
+}
+
+.text {
+  margin: 0;
+  color: var(--fg-muted);
+  font-size: 1.0625rem;
+}

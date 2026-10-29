@@ -1,0 +1,51 @@
+/* Design tokens. Component styles read these; they never hard-code colours. */
+:root {
+  /* Brand palette (from the logo) */
+  --navy-950: #020f22;
+  --navy-900: #06182f;
+  --navy-800: #0b2142;
+  --cyan-400: #19e6d6;
+  --cyan-300: #5ff0e4;
+  --teal-700: #0a7d86;
+
+  /* Neutrals */
+  --slate-50: #f6f8fb;
+  --slate-200: #dfe6ee;
+  --slate-300: #c3cfdd;
+  --slate-500: #52647c;
+  --slate-900: #0b1b33;
+
+  /* Type */
+  --font-body: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Montserrat Variable', 'Inter Variable', system-ui, sans-serif;
+
+  /* Spacing (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 128px;
+
+  /* Shape + layout */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --container: 1200px;
+  --gutter: 24px;
+  --header-height: 72px;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --shadow-sm: 0 1px 2px rgb(11 27 51 / 6%);
+  --shadow-md: 0 12px 32px -16px rgb(11 27 51 / 28%);
+}
+
+@media (max-width: 640px) {
+  :root {
+    --gutter: 20px;
+  }
+}

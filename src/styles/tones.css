@@ -1,0 +1,53 @@
+/*
+ * Tones: a section opts in with data-tone and every component inside picks up
+ * the right colours from these variables. Dark is the brand tone (hero, header,
+ * footer, CTA); light and subtle carry the content.
+ */
+[data-tone] {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+[data-tone='light'],
+[data-tone='subtle'] {
+  --bg: #fff;
+  --fg: var(--slate-900);
+  --fg-muted: var(--slate-500);
+  --border: var(--slate-200);
+  --border-strong: var(--slate-300);
+  --surface: #fff;
+  --accent: var(--teal-700);
+  --btn-bg: var(--navy-950);
+  --btn-bg-hover: var(--navy-800);
+  --btn-fg: #fff;
+}
+
+[data-tone='subtle'] {
+  --bg: var(--slate-50);
+}
+
+[data-tone='dark'] {
+  --bg: var(--navy-950);
+  --fg: #fff;
+  --fg-muted: #9fb2c9;
+  --border: rgb(148 184 224 / 18%);
+  --border-strong: rgb(148 184 224 / 36%);
+  --surface: rgb(255 255 255 / 4%);
+  --accent: var(--cyan-400);
+  --btn-bg: var(--cyan-400);
+  --btn-bg-hover: var(--cyan-300);
+  --btn-fg: var(--navy-950);
+}
+
+[data-tone='darker'] {
+  --bg: #010a17;
+  --fg: #fff;
+  --fg-muted: #8da3bd;
+  --border: rgb(148 184 224 / 14%);
+  --border-strong: rgb(148 184 224 / 30%);
+  --surface: rgb(255 255 255 / 3%);
+  --accent: var(--cyan-400);
+  --btn-bg: var(--cyan-400);
+  --btn-bg-hover: var(--cyan-300);
+  --btn-fg: var(--navy-950);
+}

@@ -1,0 +1,12 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  color: #fff;
+  text-decoration: none;
+}
+
+.word {
+  font: 600 1.2rem/1 var(--font-display);
+  letter-spacing: 0.22em;
+}

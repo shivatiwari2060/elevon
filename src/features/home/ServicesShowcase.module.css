@@ -1,0 +1,134 @@
+.showcase {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.tabs {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.tab {
+  position: relative;
+  display: flex;
+  gap: var(--space-4);
+  width: 100%;
+  padding: var(--space-5);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+}
+
+.tab:hover {
+  border-color: var(--border-strong);
+}
+
+.selected {
+  border-color: var(--border-strong);
+  background: var(--surface);
+}
+
+.indicator {
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: -1px;
+  width: 3px;
+  border-radius: 3px;
+  background: var(--accent);
+}
+
+.number {
+  padding-top: 3px;
+  color: var(--fg-muted);
+  font: 600 0.8rem/1.4 var(--font-display);
+  font-variant-numeric: tabular-nums;
+}
+
+.selected .number {
+  color: var(--accent);
+}
+
+.tabTitle {
+  display: block;
+  margin-bottom: var(--space-1);
+  font: 600 1.05rem/1.3 var(--font-display);
+}
+
+.tabSummary {
+  display: block;
+  color: var(--fg-muted);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.panel {
+  padding: var(--space-7);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.panelTitle {
+  margin-bottom: var(--space-3);
+  font-size: 1.5rem;
+}
+
+.intro {
+  color: var(--fg-muted);
+}
+
+.lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin: var(--space-6) 0;
+}
+
+.listHeading {
+  margin: 0 0 var(--space-4);
+  color: var(--accent);
+  font: 600 0.74rem/1 var(--font-body);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.link svg {
+  transition: transform 0.2s var(--ease);
+}
+
+.link:hover svg {
+  transform: translateX(4px);
+}
+
+@media (max-width: 1000px) {
+  .showcase {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .panel {
+    padding: var(--space-5);
+  }
+
+  .lists {
+    grid-template-columns: 1fr;
+  }
+}

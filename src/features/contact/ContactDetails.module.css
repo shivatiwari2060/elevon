@@ -1,0 +1,24 @@
+.list {
+  display: grid;
+  gap: var(--space-5);
+  margin-top: var(--space-5);
+}
+
+.list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  color: var(--fg-muted);
+}
+
+.list svg {
+  flex: none;
+  margin-top: 3px;
+  color: var(--accent);
+}
+
+.list strong {
+  display: block;
+  color: var(--fg);
+  font-size: 0.9rem;
+}
