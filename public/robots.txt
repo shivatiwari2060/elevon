@@ -1,3 +1,2 @@
 User-agent: *
 Allow: /
-# After the domain is final: Sitemap: https://YOUR-DOMAIN/sitemap.xml

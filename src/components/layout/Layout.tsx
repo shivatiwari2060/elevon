@@ -1,6 +1,7 @@
 import { useEffect, type ReactNode } from 'react';
 import { useLocation } from 'react-router-dom';
 import { AnimatePresence, MotionConfig, motion } from 'framer-motion';
+import { RouteSeo } from '@/components/seo/RouteSeo';
 import { Header } from './Header';
 import { Footer } from './Footer';
 
@@ -28,6 +29,7 @@ export function Layout({ children }: { children: ReactNode }) {
       <a className="skip-link" href="#main">
         Skip to content
       </a>
+      <RouteSeo />
       <ScrollManager />
       <Header />
       <AnimatePresence mode="wait" initial={false}>

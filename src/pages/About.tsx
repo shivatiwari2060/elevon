@@ -1,5 +1,4 @@
 import { CLIENT_APPROACH, MISSION, VALUES, VISION } from '@/data/company';
-import { usePageMeta } from '@/hooks/usePageMeta';
 import { CtaSection } from '@/components/layout/CtaSection';
 import { PageHero } from '@/components/layout/PageHero';
 import { Card } from '@/components/ui/Card';
@@ -14,10 +13,6 @@ import { SectionHeader } from '@/components/ui/SectionHeader';
 import styles from './About.module.css';
 
 export default function About() {
-  usePageMeta(
-    'About Elevon | Digital Solutions Company in Lalitpur, Nepal',
-    'Learn about Elevon Private Limited: our mission, vision, values, and how we work with clients in Nepal and internationally.',
-  );
   return (
     <>
       <PageHero

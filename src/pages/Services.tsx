@@ -1,5 +1,4 @@
 import { SERVICES } from '@/data/services';
-import { usePageMeta } from '@/hooks/usePageMeta';
 import { CtaSection } from '@/components/layout/CtaSection';
 import { PageHero } from '@/components/layout/PageHero';
 import { Container } from '@/components/ui/Container';
@@ -7,10 +6,6 @@ import { Section } from '@/components/ui/Section';
 import { ServiceBlock } from '@/features/services/ServiceBlock';
 
 export default function Services() {
-  usePageMeta(
-    'Services | Website Development, SEO & Digital Marketing | Elevon',
-    'Elevon offers website design and development, SEO, and digital marketing for small businesses, startups, and growing companies in Nepal and worldwide.',
-  );
   return (
     <>
       <PageHero

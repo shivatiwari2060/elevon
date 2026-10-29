@@ -8,6 +8,7 @@ const Services = lazy(() => import('@/pages/Services'));
 const Work = lazy(() => import('@/pages/Work'));
 const Contact = lazy(() => import('@/pages/Contact'));
 const Privacy = lazy(() => import('@/pages/Privacy'));
+const NotFound = lazy(() => import('@/pages/NotFound'));
 
 export function App() {
   // Passing the location down keeps the outgoing page intact while it animates out.
@@ -22,7 +23,7 @@ export function App() {
           <Route path="/work" element={<Work />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </Layout>

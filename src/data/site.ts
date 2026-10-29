@@ -5,6 +5,10 @@ export const SITE = {
   tagline: 'Elevate. Evolve. Excel.',
   email: 'elevonnp@gmail.com',
   location: 'Lalitpur, Nepal',
+  /** Public origin without a trailing slash, e.g. https://example.com. Set via VITE_SITE_URL. */
+  url: (import.meta.env.VITE_SITE_URL ?? '').trim().replace(/\/+$/, ''),
+  /** Official profile URLs (LinkedIn, Facebook, ...) used in structured data. */
+  sameAs: [] as string[],
   description:
     'Elevon helps businesses in Nepal and around the world strengthen their digital presence through website development, SEO, and digital marketing.',
 } as const;

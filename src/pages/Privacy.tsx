@@ -1,15 +1,10 @@
 import { SITE } from '@/data/site';
-import { usePageMeta } from '@/hooks/usePageMeta';
 import { PageHero } from '@/components/layout/PageHero';
 import { Container } from '@/components/ui/Container';
 import { Section } from '@/components/ui/Section';
 import styles from './Privacy.module.css';
 
 export default function Privacy() {
-  usePageMeta(
-    'Privacy Notice | Elevon Private Limited',
-    'How Elevon Private Limited handles information submitted through its website.',
-  );
   return (
     <>
       <PageHero

@@ -1,5 +1,4 @@
 import { CASE_STUDIES } from '@/data/work';
-import { usePageMeta } from '@/hooks/usePageMeta';
 import { CtaSection } from '@/components/layout/CtaSection';
 import { PageHero } from '@/components/layout/PageHero';
 import { CardGrid } from '@/components/ui/CardGrid';
@@ -10,10 +9,6 @@ import { CaseCard } from '@/features/work/CaseCard';
 import styles from './Work.module.css';
 
 export default function Work() {
-  usePageMeta(
-    'Our Work | Elevon Private Limited',
-    'Explore Elevon’s concept projects demonstrating our approach to website design, SEO, and digital marketing.',
-  );
   return (
     <>
       <PageHero

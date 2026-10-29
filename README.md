@@ -49,12 +49,24 @@ src/
 - `useServicesStore` selected service in the home showcase.
 - `useInquiryStore` contact form values, errors and submission status. Validation and submission are pure functions in `features/contact/` and are unit tested.
 
+## SEO
+
+`npm run build` prerenders every route to static HTML (`scripts/prerender.mjs`, using `src/entry-server.tsx`), so crawlers get full content without running JavaScript; the browser then hydrates it.
+
+- Per-page title, description, robots and canonical come from `src/data/seo.ts`. Add new routes there.
+- Structured data (Organization, WebSite, FAQPage, Service list, BreadcrumbList) is built in the same file from real site data.
+- With `VITE_SITE_URL` set, the build also writes `sitemap.xml` and `robots.txt` and emits canonical and Open Graph URLs. Without it the build warns and skips them.
+- Unknown URLs get a real `404.html` (noindex). Do not add a catch-all SPA rewrite on the host, or 404s will return 200.
+- Social image and icons: `public/og-image.png` (1200x630), `public/logo.png`, `public/apple-touch-icon.png`.
+
 ## Before launch
 
-1. **Contact form:** copy `.env.example` to `.env` and set `VITE_FORM_ENDPOINT` (Formspree, Netlify, or your own backend). Without it the form opens the visitor's email app.
-2. **Domain:** replace `YOUR-DOMAIN` in `public/robots.txt` and add a sitemap once the domain is final.
+1. **Domain:** set `VITE_SITE_URL` (e.g. `https://yourdomain.com`) in the host's build environment. Optionally list official profile URLs in `SITE.sameAs` (`src/data/site.ts`).
+2. **Contact form:** set `VITE_FORM_ENDPOINT` (Formspree, Netlify, or your own backend). Without it the form opens the visitor's email app.
 3. **Privacy notice:** have it reviewed, then remove the draft callout in `src/pages/Privacy.tsx`.
-4. **Hosting:** any static host works. `public/_redirects` handles client-side routing on Netlify; on Vercel add a rewrite to `/index.html`.
-5. **Case studies:** replace the concept projects in `src/data/work.ts` with real client work as it is completed.
+4. **Search Console:** add the site, submit `/sitemap.xml`, and request indexing for the home page.
+5. **Google Business Profile:** create one for Elevon (Lalitpur) and keep name, address and phone identical everywhere.
+6. **Case studies:** replace the concept projects in `src/data/work.ts` with real client work as it is completed. Real content and links from other sites drive rankings more than any technical setting.
+7. **Hosting:** any static host works (Netlify, Cloudflare Pages, Vercel). Serve `dist/`; each route is a folder with its own `index.html`.
 
 `legacy-html/` contains the earlier static HTML version and can be deleted.

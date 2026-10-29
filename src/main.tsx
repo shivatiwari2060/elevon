@@ -8,10 +8,18 @@ import '@/styles/tones.css';
 import '@/styles/base.css';
 import { App } from '@/app/App';
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+const root = document.getElementById('root') as HTMLElement;
+const app = (
   <React.StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </React.StrictMode>,
+  </React.StrictMode>
 );
+
+// Production builds ship prerendered HTML for every route; hydrate it instead of re-rendering.
+if (root.hasChildNodes()) {
+  ReactDOM.hydrateRoot(root, app);
+} else {
+  ReactDOM.createRoot(root).render(app);
+}

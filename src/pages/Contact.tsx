@@ -1,4 +1,3 @@
-import { usePageMeta } from '@/hooks/usePageMeta';
 import { useInquiryStore } from '@/store/useInquiryStore';
 import { PageHero } from '@/components/layout/PageHero';
 import { Container } from '@/components/ui/Container';
@@ -9,10 +8,6 @@ import { SuccessNotice } from '@/features/contact/SuccessNotice';
 import styles from './Contact.module.css';
 
 export default function Contact() {
-  usePageMeta(
-    'Contact Elevon | Start Your Project',
-    'Tell Elevon about your project. Request a quote for website development, SEO, or digital marketing.',
-  );
   const status = useInquiryStore((state) => state.status);
   const submitted = status === 'sent' || status === 'mailto';
 
